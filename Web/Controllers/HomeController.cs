@@ -17,8 +17,8 @@ namespace Web.Controllers
 
         public IActionResult Index()
         {
-            var localizedHeading = this._stringLocalizer["Heading"].Value;
-            return View("~/Views/Home/Index.cshtml", localizedHeading);
+            var localizedHeading = this._stringLocalizer["Heading"];
+            return View("~/Views/Home/Index.cshtml", localizedHeading.Value);
         }
     }
 }
