@@ -1,0 +1,16 @@
+﻿@using System.Globalization
+@using Microsoft.AspNetCore.Mvc.Localization
+@model string
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@inject IViewLocalizer ViewLocalizer
+
+<div>
+    <h3>Current Culture: @CultureInfo.CurrentCulture.Name</h3>
+    <h3>Current UI Culture: @CultureInfo.CurrentUICulture.Name</h3>
+    
+    <h3>Translated Heading(IStringLocalizer): @Model</h3>
+    <h3>Translated Heading(IViewLocalizer): @ViewLocalizer.GetString("Heading")</h3>
+</div>
